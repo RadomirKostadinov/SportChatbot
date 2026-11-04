@@ -22,7 +22,7 @@ TREE = {
     "bouling": {"answer": "Боулинг", "found": True},
     "voleibol": {"answer": "Волейбол", "found": True},
     "basketbol": {"answer": "Баскетбол", "found": True},
-    "shafetno": {"answer": "Шафетно бягане", "found": True},
+    "shafetno": {"answer": "Щафетно бягане", "found": True},
     "kurling": {"answer": "Кърлинг", "found": True},
     "hokei": {"answer": "Хокей", "found": True},
     "kayak": {"answer": "Кану-каяк", "found": True},

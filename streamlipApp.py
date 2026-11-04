@@ -70,15 +70,3 @@ if st.session_state.current:
         st.rerun()
 else:
     st.button("Нова игра", on_click=reset)
-
-st.markdown('<div id="end-anchor"></div>', unsafe_allow_html=True)
-components.html(
-    f"""<script>
-    const n = {len(st.session_state.messages)};
-    setTimeout(() => {{
-      const a = window.parent.document.getElementById("end-anchor");
-      if (a) a.scrollIntoView({{ behavior: "smooth", block: "end" }});
-    }}, 250);
-    </script>""",
-    height=0,
-)
