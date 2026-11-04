@@ -45,7 +45,7 @@ def handle_typed(text):
 if "messages" not in st.session_state:
     reset()
 
-st.title("СпортБот")
+st.title("Спортбот")
 st.markdown('<div class="tagline">Мисли си спорт – аз ще го позная.</div>', unsafe_allow_html=True)
 
 AVATARS = {"assistant": BOT_AVATAR, "user": USER_AVATAR}
