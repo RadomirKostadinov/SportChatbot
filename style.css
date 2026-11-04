@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap');
+
+:root {
+    --bg: #101216;
+    --card: #191d23;
+    --line: #30343b;
+    --text: #eeece6;
+    --muted: #92969d;
+    --accent: #d6a85f;
+    --dark: #101216;
+}
+
+.stApp {
+    background: var(--bg);
+}
+
+.block-container {
+    max-width: 680px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+html, body, .stApp,
+.stApp p, .stApp span, .stApp li {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+}
+
+/* TITLE */
+h1 {
+    font-family: 'Barlow Condensed', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 3.8rem !important;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    color: var(--text) !important;
+    padding-bottom: 0 !important;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 10px;
+}
+
+/* TAGLINE */
+.tagline {
+    color: var(--muted);
+    margin: 10px 0 30px;
+    font-size: .95rem;
+    letter-spacing: .02em;
+}
+
+/* CHAT MESSAGES */
+div[data-testid="stChatMessage"] {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 17px 20px;
+    margin-bottom: 14px;
+    box-shadow: none;
+}
+
+div[data-testid="stChatMessage"] p {
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+div[data-testid="stChatMessage"] strong {
+    color: var(--accent);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+/* USER MESSAGES */
+div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]),
+div[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
+    background: #27251f;
+    border: 1px solid #5c4c32;
+    border-radius: 5px;
+    margin-left: 15%;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]) p,
+div[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) p {
+    color: var(--text);
+}
+
+/* CHAT INPUT */
+[data-testid="stBottom"],
+[data-testid="stBottom"] > div {
+    background: var(--bg);
+}
+
+[data-testid="stChatInput"] {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+}
+
+[data-testid="stChatInput"]:focus-within {
+    border-color: var(--accent);
+}
+
+[data-testid="stChatInput"] textarea {
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+}
+
+/* BUTTON */
+div.stButton > button {
+    background: var(--accent);
+    color: var(--dark);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: .65rem 1.7rem;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+
+div.stButton > button:hover {
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+div.stButton > button p {
+    color: inherit;
+}
+
+/* CLEANUP */
+#MainMenu, footer {
+    visibility: hidden;
+}
+
+[data-testid="stToolbar"] {
+    visibility: hidden;
+}
