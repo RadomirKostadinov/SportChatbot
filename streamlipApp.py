@@ -46,7 +46,7 @@ if "messages" not in st.session_state:
     reset()
 
 st.title("Спортбот")
-st.markdown('<div class="tagline">Мисли си спорт – аз ще го позная.</div>', unsafe_allow_html=True)
+st.markdown('<div class="tagline">Намисли си спорт – аз ще го позная.</div>', unsafe_allow_html=True)
 
 AVATARS = {"assistant": BOT_AVATAR, "user": USER_AVATAR}
 for role, text in st.session_state.messages:
@@ -54,10 +54,8 @@ for role, text in st.session_state.messages:
         st.markdown(text)
 
 if st.session_state.current:
-    # Превключвател за гласовото управление. Когато е изключен, микрофонът не се пуска изобщо.
     voice_on = st.toggle("Гласово управление", key="voice_on")
     if voice_on:
-        # Слуша автоматично: действа само ако е казано ясно „да“ или „не“.
         heard = listen()
         if heard and heard["id"] != st.session_state.get("last_voice_id"):
             st.session_state.last_voice_id = heard["id"]
